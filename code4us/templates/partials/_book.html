@@ -1,0 +1,10 @@
+{% load static %}
+
+
+<div class="card">
+    <img src="{% static 'img/'|add:kitap.gorsel %}" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">{{ kitap.kitap_adi }}</h5>
+    <a href="{% url 'bookdetails' kitap.id %}" class="btn btn-danger">Detaylar</a>
+    </div>
+</div>
