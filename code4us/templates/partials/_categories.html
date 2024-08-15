@@ -1,6 +1,7 @@
+{% load static %}
 <div class="list-group">
     {% for kategori in kategoriler %}
-    <a href="#" class="list-group-item list-group-item-action active">
+    <a href="{% url 'category_books' kategori.id %}" class="list-group-item list-group-item-action active">
         {{ kategori.name }}                 
     </a>
     {% endfor %}  

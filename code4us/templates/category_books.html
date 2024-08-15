@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ category.name }} - Books</title>
+</head>
+<body>
+    <h1>{{ category.name }} Books</h1>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.kitap_adi }} - {{ book.aciklama }}</li>
+        {% empty %}
+            <li>No books found in this category.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
