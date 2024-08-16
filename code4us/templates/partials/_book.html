@@ -1,10 +1,10 @@
 {% load static %}
 
 
-<div class="card">
-    <img src="{% static 'img/'|add:kitap.gorsel %}" class="card-img-top" alt="...">
+<div class="card"> <!-- Bootstrap kart bileşeni ile bir kart yapısı oluşturur -->
+    <img src="{% static 'img/'|add:kitap.gorsel %}" class="card-img-top" alt="..."> <!-- Kitabın görselini ekler. 'kitap.gorsel' dinamik olarak kitap görselinin yolunu sağlar. -->
     <div class="card-body">
-    <h5 class="card-title">{{ kitap.kitap_adi }}</h5>
-    <a href="{% url 'bookdetails' kitap.id %}" class="btn btn-danger">Detaylar</a>
+    <h5 class="card-title">{{ kitap.kitap_adi }}</h5><!-- Kitap adını gösterir -->
+    <a href="{% url 'bookdetails' kitap.id %}" class="btn btn-danger">Detaylar</a><!-- Kitap detayları sayfasına yönlendiren bir buton oluşturur -->
     </div>
 </div>

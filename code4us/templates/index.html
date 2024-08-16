@@ -6,22 +6,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <title>Code4us</title>
+    <title>Code4us</title> <!-- Tarayıcı sekmesinde görünen sayfa başlığı. -->
+
 </head>
 <body>
-    {% include 'partials/_navbar.html' %}
+    {% include 'partials/_navbar.html' %} <!-- Navbar'ı (üst menüyü) içeren parçayı dahil eder. -->
 
     <div class="container mt-3">
         <div class="row">
-            <div class="col-3">
+            <div class="col-3"> <!-- Kategoriler için sol panel -->
                 {% include 'partials/_categories.html' %}
             </div>
             <div class="col-9">
                 <div class="row">
-                    {% for kitap in kitaplar %}
+                    {% for kitap in kitaplar %} <!-- Ana sayfada gösterilmesi gereken kitapları listeleyen döngü -->
                         {% if kitap.anasayfa %}
                             <div class="col-4">
-                                {% include 'partials/_book.html' %}
+                                {% include 'partials/_book.html' %} <!-- Kitap bilgilerini içeren parçayı dahil eder. -->
                             </div>
                         {% endif %}
                     {% endfor %}

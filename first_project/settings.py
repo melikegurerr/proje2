@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles', # Bu kısımda sistemin otomatik yüklemediği bazı app'leri ekledik:code4us,django_extensions
     'django_extensions',
 ]
 

@@ -1,8 +1,10 @@
 {% load static %}
-<div class="list-group">
-    {% for kategori in kategoriler %}
+<div class="list-group"> <!-- Bootstrap'in liste grubu sınıfı, dikey olarak hizalanmış bir liste oluşturur -->
+    {% for kategori in kategoriler %} <!-- Django'nun for döngüsü, 'kategoriler' adlı queryset'teki her bir kategori için döner -->
     <a href="{% url 'category_books' kategori.id %}" class="list-group-item list-group-item-action active">
-        {{ kategori.name }}                 
+        <!-- Her kategori için bir bağlantı oluşturur, href ile her kategorinin detay sayfasına yönlendirir, 
+        Bootstrap sınıfları ile görsel ayarları yapar ve active sınıfı ile bu öğenin vurgulanmasını sağlar -->
+        {{ kategori.name }}  <!-- Kategori adını kullanıcıya gösterir -->               
     </a>
     {% endfor %}  
 </div>

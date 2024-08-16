@@ -1,22 +1,22 @@
-<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark"><!-- Navbar'ı tanımlar, genişleme ve arka plan rengini ayarlar, ve tema koyu yapar. -->
   <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'home' %}">Code4us Kitap</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Code4us Kitap</a> <!-- Navbar'daki site başlığını ve ana sayfaya yönlendiren bağlantıyı tanımlar. -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarColor02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                  <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a> <!-- Ana sayfaya yönlendiren bağlantı, aktif sayfayı belirtir. -->
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="{% url 'books' %}">Books</a>
+                  <a class="nav-link" href="{% url 'books' %}">Books</a> <!-- Kitaplar sayfasına yönlendiren bağlantı. -->
               </li>
           </ul>
           
-          <form class="d-flex" role="search" method="get" action="{% url 'search' %}">
-              <input class="form-control me-2" type="search" name="kitap_adi" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-light" type="submit">Search</button>
+          <form class="d-flex" role="search" method="get" action="{% url 'search' %}"> <!-- Arama formunu tanımlar, GET yöntemi kullanarak arama yapar ve arama sonuçlarına yönlendirir. -->
+              <input class="form-control me-2" type="search" name="kitap_adi" placeholder="Search" aria-label="Search"> <!-- Arama kutusu, 'kitap_adi' adıyla form verisi gönderir. -->
+              <button class="btn btn-outline-light" type="submit">Search</button> <!-- Arama butonu. -->
           </form>
       </div>
   </div>

@@ -2,15 +2,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ category.name }} - Books</title>
+    <title>{{ category.name }} - Books</title> <!-- Sayfanın başlığı. 'category.name' değişkeni kategori adını gösterir. -->
 </head>
 <body>
-    <h1>{{ category.name }} Books</h1>
+    <h1>{{ category.name }} Books</h1> <!-- Kategori adını içeren başlık. 'category.name' değişkeni kategori adını gösterir. -->
+    
     <ul>
-        {% for book in books %}
-            <li>{{ book.kitap_adi }} - {{ book.aciklama }}</li>
+        {% for book in books %} <!-- 'books' değişkenindeki her bir kitap için döngü başlatır. -->
+            <li>{{ book.kitap_adi }} - {{ book.aciklama }}</li> <!-- Kitap başlığı ve açıklamasını liste öğesi olarak gösterir. -->
         {% empty %}
-            <li>No books found in this category.</li>
+            <li>No books found in this category.</li> <!-- Eğer 'books' listesi boşsa veya sonuç bulunamazsa gösterilecek mesaj. -->
         {% endfor %}
     </ul>
 </body>

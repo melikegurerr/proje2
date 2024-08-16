@@ -9,21 +9,21 @@
     <title>Code4us</title>
 </head>
 <body>
-    {% include 'partials/_navbar.html' %}
+    {% include 'partials/_navbar.html' %} <!-- Navbar'ı (üst menüyü) içeren parçayı dahil eder. -->
 
     <div class="container mt-3">
         <div class="row">
             <div class="col-3">
-                {% include 'partials/_categories.html' %}
+                {% include 'partials/_categories.html' %} <!-- Kategorilerin listelendiği parçayı dahil eder. -->
             </div>
             <div class="col-9">
                 <h1>Tüm Kitaplar</h1>
                 <div class="row">
-                    {% for kitap in kitaplar %}
+                    {% for kitap in kitaplar %} <!-- 'kitaplar' değişkenindeki her bir kitap için döngü başlatır. -->
                         <div class="col-4">
-                            {% include 'partials/_book.html' %}
+                            {% include 'partials/_book.html' %} <!-- Kitap bilgilerini içeren parçayı dahil eder. -->
                         </div>
-                    {% endfor %}
+                    {% endfor %} <!-- 'kitaplar' döngüsünün sonu. -->
                 </div>
             </div>
         </div>
